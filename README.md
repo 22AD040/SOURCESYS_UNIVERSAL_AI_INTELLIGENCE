@@ -1,99 +1,85 @@
 # 🧠 SOURCESYS_GENAI_HR_INTELLIGENCE
 
-## 🚀 GenAI-Powered HR Intelligence & Retention Prediction System
+## 🚀 Universal AI Data Intelligence & Predictive Analytics Platform
 
-An advanced AI-driven HR Analytics Dashboard built using **Streamlit, NumPy, Pandas, Matplotlib, and Machine Learning** to simulate intelligent resume screening, bias-aware analysis, and employee retention risk prediction.
+An enterprise-ready AI-powered analytics dashboard built using **Streamlit, NumPy, Pandas, Matplotlib, and Machine Learning**.
 
-This system provides interactive data filtering, predictive modeling, and workforce intelligence insights for modern HR decision-making.
+This system dynamically adapts to any uploaded CSV dataset and automatically performs data analysis, visualization, and predictive modeling without hardcoded dependencies.
 
 ---
 
 ## 🎯 Project Objective
 
-To build a GenAI-inspired HR Intelligence system that:
+To build a fully dynamic AI analytics system that:
 
-- Screens candidates using analytical filters
-- Computes AI-based retention risk scores
-- Detects workforce trends and bias patterns
-- Predicts job change probability using Logistic Regression
-- Provides interactive data visualization
-- Enables filtered CSV data download
+- Accepts any CSV dataset
+- Performs intelligent data filtering
+- Generates statistical insights
+- Automatically detects ML problem type
+- Executes Classification or Regression models
+- Prevents dataset-specific errors
+- Enables downloadable filtered data
 
 ---
 
 ## 🏗️ Tech Stack
 
-- **Python**
-- **Streamlit**
-- **NumPy**
-- **Pandas**
-- **Matplotlib**
-- **Scikit-learn (Logistic Regression)**
-- **Virtual Environment (venv)**
+- Python
+- Streamlit
+- NumPy
+- Pandas
+- Matplotlib
+- Scikit-learn
+- Virtual Environment (venv)
 
 ---
 
-## 📊 Dataset Used
+## 📂 Features
 
-HR Analytics – Job Change of Data Scientists  
-🔗 https://www.kaggle.com/datasets/arashnic/hr-analytics-job-change-of-data-scientists
+### ✅ Dynamic Dataset Handling
+- Works with ANY CSV file
+- No hardcoded column dependencies
+- Automatic numeric column detection
 
-Dataset includes:
+### ✅ Smart Data Filtering
+- Interactive range-based filtering
+- Real-time metric updates
+- Statistical summaries
 
-- Training hours
-- Education level
-- Experience
-- Company size
-- City development index
-- Target variable (0 = Stay, 1 = Leave)
-
----
-
-## 💡 Key Features
-
-### ✅ Interactive Filtering
-- Numeric range filtering
-- Education-level selection
-- Dynamic data updates
-
-### ✅ AI Retention Risk Score
-Custom risk scoring logic based on:
-- Training hours
-- Development index
-
-Risk Categories:
-- Low
-- Medium
-- High
-
-### ✅ Machine Learning Prediction
-- Logistic Regression model
-- Feature encoding
-- Train/Test split
-- Model accuracy evaluation
-
-### ✅ Advanced Visualizations
+### ✅ Advanced Visualization
 - Line Chart
 - Bar Chart
 - Histogram
 - Scatter Plot
 - Correlation Heatmap
-- Target Distribution Chart
 
-### ✅ HR Metrics Dashboard
-- Total Candidates
-- Average Training Hours
-- Risk Score
-- Job Change %
+### ✅ Intelligent Machine Learning Module
 
-### ✅ CSV Export Feature
-Download filtered data using:
+The system automatically detects:
+
+- Classification problems (≤ 10 unique target values)
+- Regression problems (> 10 unique target values)
+
+#### Classification
+- Logistic Regression
+- Accuracy Score
+- Confusion Matrix
+
+#### Regression
+- Linear Regression
+- R² Score
+
+---
+
+## 📥 CSV Export Feature
+
+Download filtered dataset using:
 
 ```python
 csv = filtered_df.to_csv(index=False).encode('utf-8')
 
 st.download_button(
-    "Download filtered data",
+    "Download Filtered Data",
     csv,
     "filtered_data.csv",
     "text/csv"
